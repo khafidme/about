@@ -8,29 +8,56 @@
     <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-    <!--
     <div id="preloader">
-        <span>Loading...</span>
-    </div>-->
+        <div class="loading">
+            Loading...
+        </div>
+    </div>
     <header>
         <div class="navbar">
             <div class="logo">
                 Khafid
             </div>
-            <div class="time">10:58 AM</div>
+            <div class="menu">
+                <button onclick="document.getElementById('rightnav').style.display='block'">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"></path></svg>
+                </button>
+            </div>
+            <nav id="rightnav">
+                <div class="menu">
+                    <button onclick="document.getElementById('rightnav').style.display='none'">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"></path></svg>
+                    </button>
+                </div>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about-me">About</a></li>
+                    <li><a href="#experiences">Experiences</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact-me">Contact</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
     <main>
         <section id="hero">
             <div class="head">
                 <div class="breadcrumb">
-                    <span>Greeting</span>
+                    <span>01/ Greeting</span>
                 </div>
                 <div class="title">
-                    <h1>Say Hi! <svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" fill="#000000" viewBox="0 0 256 256"><path d="M188.14,31a4,4,0,0,1,4.9-2.83c14.87,4,27.1,13.17,34.42,25.86a4,4,0,1,1-6.92,4C214.28,47.16,203.77,39.3,191,35.86A4,4,0,0,1,188.14,31ZM77.1,228.86c-9.79-7.72-17.94-17.53-25.64-30.86a4,4,0,0,0-6.92,4c8.22,14.24,17,24.77,27.61,33.14a4,4,0,0,0,2.47.86,4,4,0,0,0,2.48-7.14Zm148-63.13a84.09,84.09,0,0,1-81,62.29,84.37,84.37,0,0,1-21.87-2.9,83.41,83.41,0,0,1-51-39.13l-38-65.82a24,24,0,0,1,25.7-35.49L51.88,72.46A24,24,0,0,1,92.48,47a24,24,0,0,1,43.61-4.64l19.08,33a24,24,0,0,1,43.56-4.54l18,31.18A83.43,83.43,0,0,1,225.12,165.73ZM209.8,106l-18-31.18a16,16,0,1,0-27.71,16l10,17.32a4,4,0,0,1-1.46,5.47,36,36,0,0,0-13.18,49.17,4,4,0,1,1-6.93,4,44.07,44.07,0,0,1,12.73-58L129.16,46.31a16,16,0,0,0-27.71,16l26,45a4,4,0,0,1-6.93,4l-34-58.89a16,16,0,1,0-27.71,16l38,65.81a4,4,0,1,1-6.93,4l-22-38.1a16,16,0,1,0-27.71,16l38,65.82A76,76,0,1,0,209.8,106Z"></path></svg>, from Khafid.</h1>
-                    <span>Frontend Web Developer</span>
-                    <div class="arrow-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="#000000" viewBox="0 0 256 256"><path d="M128,28A100,100,0,1,0,228,128,100.11,100.11,0,0,0,128,28Zm0,192a92,92,0,1,1,92-92A92.1,92.1,0,0,1,128,220Zm34.83-86.83a4,4,0,0,1,0,5.66l-32,32a4,4,0,0,1-5.66,0l-32-32a4,4,0,0,1,5.66-5.66L124,158.34V88a4,4,0,0,1,8,0v70.34l25.17-25.17A4,4,0,0,1,162.83,133.17Z"></path></svg>
+                    <h2>Say Hi! <svg class="hand-waving" xmlns="http://www.w3.org/2000/svg" width="96" height="96" fill="#000000" viewBox="0 0 256 256"><path d="M188.14,31a4,4,0,0,1,4.9-2.83c14.87,4,27.1,13.17,34.42,25.86a4,4,0,1,1-6.92,4C214.28,47.16,203.77,39.3,191,35.86A4,4,0,0,1,188.14,31ZM77.1,228.86c-9.79-7.72-17.94-17.53-25.64-30.86a4,4,0,0,0-6.92,4c8.22,14.24,17,24.77,27.61,33.14a4,4,0,0,0,2.47.86,4,4,0,0,0,2.48-7.14Zm148-63.13a84.09,84.09,0,0,1-81,62.29,84.37,84.37,0,0,1-21.87-2.9,83.41,83.41,0,0,1-51-39.13l-38-65.82a24,24,0,0,1,25.7-35.49L51.88,72.46A24,24,0,0,1,92.48,47a24,24,0,0,1,43.61-4.64l19.08,33a24,24,0,0,1,43.56-4.54l18,31.18A83.43,83.43,0,0,1,225.12,165.73ZM209.8,106l-18-31.18a16,16,0,1,0-27.71,16l10,17.32a4,4,0,0,1-1.46,5.47,36,36,0,0,0-13.18,49.17,4,4,0,1,1-6.93,4,44.07,44.07,0,0,1,12.73-58L129.16,46.31a16,16,0,0,0-27.71,16l26,45a4,4,0,0,1-6.93,4l-34-58.89a16,16,0,1,0-27.71,16l38,65.81a4,4,0,1,1-6.93,4l-22-38.1a16,16,0,1,0-27.71,16l38,65.82A76,76,0,1,0,209.8,106Z"></path></svg>, from Khafid.</h2>
+                    <h5>Frontend Web Developer</h5>
+                    <div class="socmed">
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#000000" viewBox="0 0 256 256"><path d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"></path></svg>
+                        </a>
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#000000" viewBox="0 0 256 256"><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM203.43,64,128,133.15,52.57,64ZM216,192H40V74.19l82.59,75.71a8,8,0,0,0,10.82,0L216,74.19V192Z"></path></svg>
+                        </a>
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#000000" viewBox="0 0 256 256"><path d="M208.31,75.68A59.78,59.78,0,0,0,202.93,28,8,8,0,0,0,196,24a59.75,59.75,0,0,0-48,24H124A59.75,59.75,0,0,0,76,24a8,8,0,0,0-6.93,4,59.78,59.78,0,0,0-5.38,47.68A58.14,58.14,0,0,0,56,104v8a56.06,56.06,0,0,0,48.44,55.47A39.8,39.8,0,0,0,96,192v8H72a24,24,0,0,1-24-24A40,40,0,0,0,8,136a8,8,0,0,0,0,16,24,24,0,0,1,24,24,40,40,0,0,0,40,40H96v16a8,8,0,0,0,16,0V192a24,24,0,0,1,48,0v40a8,8,0,0,0,16,0V192a39.8,39.8,0,0,0-8.44-24.53A56.06,56.06,0,0,0,216,112v-8A58.14,58.14,0,0,0,208.31,75.68ZM200,112a40,40,0,0,1-40,40H112a40,40,0,0,1-40-40v-8a41.74,41.74,0,0,1,6.9-22.48A8,8,0,0,0,80,73.83a43.81,43.81,0,0,1,.79-33.58,43.88,43.88,0,0,1,32.32,20.06A8,8,0,0,0,119.82,64h32.35a8,8,0,0,0,6.74-3.69,43.87,43.87,0,0,1,32.32-20.06A43.81,43.81,0,0,1,192,73.83a8.09,8.09,0,0,0,1,7.65A41.72,41.72,0,0,1,200,104Z"></path></svg>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -38,8 +65,7 @@
         <section id="about-me">
             <div class="head">
                 <div class="breadcrumb">
-                    <div class="breadcrumb-number">01/</div>
-                    <div class="breadcrumb-title">About Me</div>
+                    <div class="breadcrumb-number">02/ About Me</div>
                 </div>
             </div>
             <div class="content">
@@ -55,8 +81,7 @@
         <section id="experiences">
             <div class="head">
                 <div class="breadcrumb">
-                    <div class="breadcrumb-number">02/</div>
-                    <div class="breadcrumb-title">Experiences</div>
+                    <div class="breadcrumb-number">03/ Work Experiences</div>
                 </div>
             </div>
             <div class="content">
@@ -107,28 +132,27 @@
         <section id="projects">
             <div class="head">
                 <div class="breadcrumb">
-                    <div class="breadcrumb-number">02/</div>
-                    <div class="breadcrumb-title">Recent Projects</div>
+                    <div class="breadcrumb-number">04/ Recent Projects</div>
                 </div>
             </div>
             <div class="content">
                 <div class="projects">
                     <div class="projects-item">
-                        <div class="item-title">
-                            <h2>Garn Erly</h2>
-                            <p>The Premier platform for unbiased blockchain insights and community.</p>
-                        </div>
                         <div class="img-item">
                             <img src="assets/Screenshot_3.jpg" alt="">
+                        </div>
+                        <div class="item-title">
+                            <a href="#"><h2>Garn Erly</h2></a>
+                            <p>The Premier platform for unbiased blockchain insights and community.</p>
                         </div>
                     </div>
                     <div class="projects-item">
-                        <div class="item-title">
-                            <h2>Apple Music</h2>
-                            <p>The Premier platform for unbiased blockchain insights and community.</p>
-                        </div>
                         <div class="img-item">
                             <img src="assets/Screenshot_3.jpg" alt="">
+                        </div>
+                        <div class="item-title">
+                            <a href="#"><h2>Garn Erly</h2></a>
+                            <p>The Premier platform for unbiased blockchain insights and community.</p>
                         </div>
                     </div>
                 </div>
@@ -137,13 +161,12 @@
         <section id="contact-me">
             <div class="head">
                 <div class="breadcrumb">
-                    <div class="breadcrumb-number">04/</div>
-                    <div class="breadcrumb-title">Want to work together?</div>
+                    <div class="breadcrumb-number">04/ Want to work together?</div>
                 </div>
             </div>
             <div class="content">
                 <div class="content-main">
-                    <h3>hello@khafid.my.id</h3>
+                    <h5>hello@khafid.my.id</h5>
                     <p>Available</p>
                 </div>
             </div>
@@ -153,9 +176,6 @@
         <div class="account-identity">
             <p>Akogun Damola</p>
             <span>Innovative Developer</span>
-        </div>
-        <div class="social-media">
-            <p>Twitter, Linkedin, Github</p>
         </div>
         <div class="copyright">
             <p>Development By Me</p>

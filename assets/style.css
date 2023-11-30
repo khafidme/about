@@ -8,6 +8,10 @@
     box-sizing: border-box; 
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
 }
@@ -38,6 +42,7 @@ h5 {
 }
 
 #preloader {
+    position: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,6 +50,7 @@ h5 {
     top: 0;
     left: 0;
     height: 100vh;
+    z-index: 99;
     background: black;
     color: white;
     transition: 0.3s ease-in all;
@@ -55,16 +61,53 @@ header {
     top: 0;
     left: 0;
     width: 100%;
+    background: #fff;
+    z-index: 10;
+}
+
+nav {
+    display: none;
+    position: fixed;
+    width: 400px;
+    height: 100%;
+    padding: 40px;
+    top: 0;
+    right: 0;
+    background: #000;
+    animation: nav 0.3s;
+}
+
+@keyframes nav {
+    0% {margin-right: -400px;}
+    100% {margin-right: 0;}
+}
+
+nav li {
+    list-style-type: none;
+    line-height: 1.5;
+    text-align: right;
+}
+
+nav li a {
+    display: block;
+    padding: 15px;
+    color: #fff;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    background: #fff;
+    color: #000;
 }
 
 main {
     display: flex;
     flex-direction: column;
-    margin: 150px 20px 80px 20px;
+    margin: 80px 20px 80px 20px;
 }
 
 section {
-    margin: 20px 0;
+    margin: 30px 0;
 }
 
 footer {
@@ -86,12 +129,14 @@ footer {
     font-weight: 500;
 }
 
-.time {
+.menu button {
     padding: 10px 25px;
     background: #000;
     color: #fff;
     font-size: 0.8em;
     font-weight: 200;
+    border: none;
+    cursor: pointer;
 }
 
 .breadcrumb {
@@ -107,6 +152,7 @@ footer {
 }
 
 .title {
+    position: relative;
     margin: 80px 0;
     text-align: center;
 }
@@ -117,6 +163,30 @@ footer {
 
 .title .arrow-icon {
     margin: 80px 0;
+}
+
+.socmed {
+    margin: 40px 0;
+}
+
+.socmed a {
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.head h2 {
+    font-weight: 600;
+}
+
+.hand-waving {
+    width: 100px;
+    height: 100px;
+    animation: waving 1s infinite;
+}
+
+@keyframes waving {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(45deg);}
 }
 
 .content {
@@ -189,7 +259,6 @@ footer {
 }
 
 .projects-item h2 {
-    width: 30%;
     text-decoration: underline;
     text-transform: uppercase;
 }
@@ -198,6 +267,10 @@ footer {
     margin: 30px 0;
     font-size: 1.3em;
     text-transform: uppercase;
+}
+
+.img-item img {
+    width: 100%;
 }
 
 @media only screen and (min-width: 768px) {
@@ -215,12 +288,15 @@ footer {
         margin: 30px 70px;
     }
 
-    .head, .content, .projects-item {
+    .head, 
+    .content, 
+    .projects-item {
         display: flex;
         gap: 30px;
     }
 
-    .breadcrumb, .content-title {
+    .breadcrumb, 
+    .content-title {
         flex: 30%;
     }
 
@@ -228,10 +304,6 @@ footer {
         flex: 80%;
         font-size: 1.5em;
         padding-right: 30%;
-    }
-
-    .item-title {
-        flex: 50%;
     }
 
     .content {
