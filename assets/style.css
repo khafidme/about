@@ -273,6 +273,10 @@ footer {
     width: 100%;
 }
 
+.item-title a {
+    color: #000;
+}
+
 @media only screen and (min-width: 768px) {
     main {
         margin: 150px 70px 80px 70px;
